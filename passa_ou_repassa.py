@@ -1,7 +1,7 @@
 from tkinter import *
 
 class App:
-    
+
     def __init__(self, master):
         frame = Frame(master)
         frame.pack()
@@ -21,13 +21,11 @@ class App:
         self.remove_left = Button(frame, text = "-", command = lambda: self.remove_point('left'))
         self.remove_left.pack(side = LEFT)
 
-        self.add_right = Button(frame, text = "+", command = self.add_point('right'))
+        self.add_right = Button(frame, text = "+", command = lambda: self.add_point('right'))
         self.add_right.pack(side = LEFT)
 
-        self.remove_right = Button(frame, text = "-", command = self.remove_point('right'))
+        self.remove_right = Button(frame, text = "-", command = lambda: self.remove_point('right'))
         self.remove_right.pack(side = LEFT)
-
-        self.placar.pack()
 
         self.button = Button(frame, text = "Sair", fg = "red", command = frame.quit)
         self.button.pack(side = RIGHT)
