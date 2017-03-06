@@ -12,6 +12,19 @@ class App:
         self.makerama.pack()
 
         self.placar = Label(frame, textvariable=self.str_placar, anchor=CENTER, fg = "blue", justify=CENTER, font=("Helvetica", 150))
+
+        self.add_left = Button(frame, text = "+", command = lambda: self.add_point('left'))
+        self.add_left.pack(side = LEFT)
+
+        self.remove_left = Button(frame, text = "-", command = lambda: self.remove_point('left'))
+        self.remove_left.pack(side = LEFT)
+
+        self.add_right = Button(frame, text = "+", command = self.add_point('right'))
+        self.add_right.pack(side = LEFT)
+
+        self.remove_right = Button(frame, text = "-", command = self.remove_point('right'))
+        self.remove_right.pack(side = LEFT)
+        
         self.placar.pack()
 
         self.button = Button(frame, text = "Sair", fg = "red", command = frame.quit)
