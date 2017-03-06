@@ -14,6 +14,9 @@ class App:
         self.placar = Label(frame, textvariable=self.str_placar, anchor=CENTER, fg = "blue", justify=CENTER, font=("Helvetica", 150))
         self.placar.pack()
 
+        self.button = Button(frame, text = "Sair", fg = "red", command = frame.quit)
+        self.button.pack(side = RIGHT)
+
         self.str_placar.set('0x0')
 
     def add_point(self, side):
