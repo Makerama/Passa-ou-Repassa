@@ -1,6 +1,7 @@
 from tkinter import *
 
 class App:
+    
     def __init__(self, master):
         frame = Frame(master)
         frame.pack()
@@ -11,7 +12,8 @@ class App:
         self.makerama.configure(background='white')
         self.makerama.pack()
 
-        self.placar = Label(frame, textvariable=self.str_placar, anchor=CENTER, fg = "blue", justify=CENTER, font=("Helvetica", 150))
+        self.placar = Label(frame, textvariable=self.str_placar, anchor=CENTER, fg = "blue", justify=CENTER, font=("Helvetica", 350))
+        self.placar.pack()
 
         self.add_left = Button(frame, text = "+", command = lambda: self.add_point('left'))
         self.add_left.pack(side = LEFT)
@@ -24,7 +26,7 @@ class App:
 
         self.remove_right = Button(frame, text = "-", command = self.remove_point('right'))
         self.remove_right.pack(side = LEFT)
-        
+
         self.placar.pack()
 
         self.button = Button(frame, text = "Sair", fg = "red", command = frame.quit)
