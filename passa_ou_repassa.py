@@ -28,7 +28,11 @@ root = Tk()
 root.title = "Makerama"
 root.configure(background='white')
 
+#set focus
 root.focus_set() # <-- move focus to this widget
+
+#Esc to exit
+root.bind("<Escape>", lambda e: e.widget.quit())
 
 app = App(root)
 
